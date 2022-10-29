@@ -1,68 +1,49 @@
+
+#Define a Bank Account Class
 class BankAccount:
-    def __init__(self, full_name, account_number, balance):
-       self.full_name = full_name
-       self.account_number = account_number
-       self.balance = balance
-''' Defined a class BankAccount with an init function that
-takes in 3 parameters, fullname, account_number and balance'''
+    def __init__(self, full_name, account_number, account_balance,):
+        account_balance = 0
+        self.name = full_name
+        self.account = int(account_number)
+        self.balance = float(account_balance)
 
+    def print_statement(self):
+        print(f'{self.name}\nAccount No.:{self.account}\n Balance: ${self.balance}\n')
 
+    def sign_off_statement(self):
+        print(f'Thank you, {self.name}, for being a loyal customer!\n')  
 
-#Deposit Method
-def deposit(self,balance):
-   deposit_amount = float(input("Deposit Amount: $"))
-   self.balance += deposit_amount
-   print("Amount Deposited: $", deposit_amount, "New Balance: $", balance)
+    def deposit(self, deposit_amount):
+        self.balance = self.balance + deposit_amount
+        print(f'Amount Deposited: ${deposit_amount}' f'\nBalance after Deposit: ${self.balance}\n')
 
-''' Defined a deposit method with the parameter amount
-that allows user to input a float and will add the amount 
-to the balance and print a message "Amount deposited: $x.xx
-New balance: $y.yy "
-'''    
+    def withdraw(self, withdraw_amount):
+        self.balance = self.balance - withdraw_amount
+        print(f'Amount Withdrawn: ${withdraw_amount}\nBalance after Withdraw: ${self.balance}\n')
+        if withdraw_amount >= self.balance:
+            self.balance - 10
+            print(f'Insufficent Funds. An overdraft fee of $10 will be applied to your account.\nNew Account with overdraft: ${self.balance}\n')
       
-#Withdraw Method
-def withdraw(self, balance):
-    withdraw_amount = float(input("Withdraw Amount: $" ,withdraw_amount, "New Balance: $",  balance))
-    if self.balance >= withdraw_amount:
-        self.balance -= withdraw_amount
-        print("Amount withdrawn: $", withdraw_amount, "New Balance: $", balance )
-    elif withdraw_amount > balance:
-        balance += 10    
-    print("Insufficient funds. An overdraft fee of $10 has been applied to your account.")
-    print("New balance with overdraft: $", balance)
+    def get_balance(self):
+        print(f'\nHello {self.name}!\nYour current account balance is: ${self.balance}\n')
 
-'''Withdraw method with the parameter amount
-that allows user to input a float and will subtract the amount 
-from the balance and print a message "Amount withdrawn: $x.xx
-New balance: $y.yy " If user withdraws greater than current balance,
-an over draft fee of 10 is deducted from balance.
-'''    
+    def add_interest(self):
+        print(f'Account Balance with Monthly Interest Fee: {self.balance * 0.00083}\n')
+  
+#------------------------------------------------------------------------------------------  
 
-#Get Balance Function
-def get_balance(balance):
-    print("n\Hello loyal customer!n\ Your account balance is: $",balance)
+# Bank Accounts:
 
-''' Method to get balance function to print account balance message'''
+johnny_citizen = BankAccount('Johnny Citizen', '0193832756', 0)
+johnny_citizen.get_balance()
+
+johnny_citizen.deposit(1200)
+
+johnny_citizen.withdraw(1300)
+
+johnny_citizen.sign_off_statement()
 
 
-# Add Interest Function
-def add_interest():
-    balance_with_interest = (balance, * 0.00083)
+# jane_citizen =
 
-''' Method that adds interest to users balance
-with a monthly rate of 0.00083'''
-
-#Print Statement Function
-''' Method that printes a message with the account name,
-account number and balance'''
-
-#3 Bank Accounts
-customer_1 = BankAccount("Brooke Finister", )
-customer_2 = BankAccount()
-customer_3 = BankAccount()
-
-# Calling functions with BankAccount object
-
-customer_1.deposit()
-customer_1.withdraw()
-customer_1.display()
+# mitchell_hudson =
