@@ -22,10 +22,11 @@ New balance: $y.yy "
       
 #Withdraw Method
 def withdraw(self, balance):
-    withdraw_amount = float(input("Withdraw Amount: $"))
-    self.balance -= withdraw_amount
-    print("Amount withdrawn: $", withdraw_amount, "New Balance: $", balance )
-    if withdraw_amount > balance:
+    withdraw_amount = float(input("Withdraw Amount: $" ,withdraw_amount, "New Balance: $",  balance))
+    if self.balance >= withdraw_amount:
+        self.balance -= withdraw_amount
+        print("Amount withdrawn: $", withdraw_amount, "New Balance: $", balance )
+    elif withdraw_amount > balance:
         balance += 10    
     print("Insufficient funds. An overdraft fee of $10 has been applied to your account.")
     print("New balance with overdraft: $", balance)
@@ -46,7 +47,7 @@ def get_balance(balance):
 
 # Add Interest Function
 def add_interest():
-    balance_with_interest = balance * 0.00083
+    balance_with_interest = (balance, * 0.00083)
 
 ''' Method that adds interest to users balance
 with a monthly rate of 0.00083'''
@@ -56,7 +57,7 @@ with a monthly rate of 0.00083'''
 account number and balance'''
 
 #3 Bank Accounts
-customer_1 = BankAccount()
+customer_1 = BankAccount("Brooke Finister", )
 customer_2 = BankAccount()
 customer_3 = BankAccount()
 
