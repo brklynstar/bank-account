@@ -1,10 +1,8 @@
 
 #Define a Bank Account Class
-from turtle import back
-
 
 class BankAccount:
-    def __init__(self, full_name, account_number, account_balance,):
+    def __init__(self, full_name, account_number, account_balance):
         account_balance = 0
         self.name = full_name
         self.account = int(account_number)
@@ -17,7 +15,7 @@ class BankAccount:
         print(f'Account Holder Name: {self.name}\nAccount No.:{self.account}\nCurrent Balance: ${self.balance}\n')
 
     def sign_off_statement(self):
-        print(f'Thank you for coming thru and using the Hustlers Bank ATM!\nImma hold onto your cash for you!\n\nKeep stackin them racks {self.name}!\n Stay Loyal.')  
+        print(f'Thank you for coming thru and using the Hustlers Bank ATM!\nImma hold onto your cash for you!\n\nKeep stackin them racks {self.name}!\nStay Loyal.')  
 
     def deposit(self, deposit_amount):
         self.balance = self.balance + deposit_amount
