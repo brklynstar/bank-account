@@ -49,7 +49,7 @@ johnny_citizen.deposit(1200)
 johnny_citizen.withdraw(1300)
 johnny_citizen.sign_off_statement()
 
-
+# Deposit and withdraw with no issues
 jane_citizen = BankAccount('Jane Citizen', '0157462548', 0)
 jane_citizen.greeting()
 jane_citizen.get_balance()
@@ -58,6 +58,7 @@ jane_citizen.deposit(10000)
 jane_citizen.withdraw(10)
 jane_citizen.sign_off_statement()
 
+#Deposit, withdraw and interest added
 mitchell_hudson = BankAccount('Mitchell Hudson', '0137295747', 0)
 mitchell_hudson.greeting()
 mitchell_hudson.get_balance()
